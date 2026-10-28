@@ -29,6 +29,7 @@ dependencies = [
     "statsmodels>=0.14.1",
     "matplotlib>=3.8.4",
     "openpyxl>=3.1.2",
+    "greenlet>=3.0.0",
 ]
 
 [project.optional-dependencies]
@@ -59,6 +60,7 @@ select = [
 ]
 ignore = [
     "E501", # line too long (handled by formatter)
+    "B008", # function call in argument defaults (standard for FastAPI Depends)
 ]
 
 [tool.ruff.format]
@@ -84,6 +86,7 @@ module = [
     "scipy.*",
     "matplotlib.*",
     "openpyxl.*",
+    "psutil.*",
 ]
 ignore_missing_imports = true
 
