@@ -1,0 +1,12 @@
+apiVersion: 1
+
+providers:
+  - name: "MultiCloud Resiliency"
+    orgId: 1
+    folder: "Multi-Cloud Resiliency"
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 5
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/dashboards
