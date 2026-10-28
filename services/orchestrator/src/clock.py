@@ -50,6 +50,10 @@ class MockClock:
         """Avanza manualmente el reloj simulado."""
         self._current_ns += int(seconds * 1_000_000_000)
 
+    def set_ns(self, timestamp_ns: int) -> None:
+        """Fija la marca de tiempo exacta en nanosegundos."""
+        self._current_ns = timestamp_ns
+
     async def sleep(self, seconds: float) -> None:
         """Avanza el reloj inmediatamente sin bloquear el hilo de ejecución."""
         self.advance(seconds)
